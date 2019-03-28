@@ -1,0 +1,53 @@
+<% include head.ejs %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mijn profiel</title>
+</head>
+
+<body>
+
+   <header>
+       <a class="logo" href="index.html">Mijn profiel</a>
+
+       <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+       <nav>
+           <ul>
+               <li><a href="index.ejs">Home</a></li>
+               <li><a href="index.ejs">Mijn profiel</a></li>
+           </ul>
+       </nav>
+
+       <label for="nav-toggle" class="nav-toggle-label">
+           <span></span>
+       </label>
+
+   </header>
+
+   <img src="<%= typeof file != 'undefined' ? file : '' %>" class="img">
+
+
+   <%= typeof msg != 'undefined' ? msg : '' %>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div>
+        <input name="myImage" type="file" class="btn-file">
+        </div>
+        <button type="submit" class="btn">Voeg toe</button>
+    </form>
+
+   <section class="section1">
+       <h2>Hoi, ik ben <span>Pelle</span></h2>
+       <h3>Koken | Sporten | Muziek maken</h3>
+       <span class="line"></span>
+       <p>Ik ben 18 jaar oud en ik woon in de buurt van Leiden. Ik hou van sporten en muziek. Ook ben ik een auto gek en vind ik het leuk om deze met mijn camera te fotograferen.</p>
+    </section>
+
+</body>
+</html>
+
+
+
+<% include tail.ejs %>
