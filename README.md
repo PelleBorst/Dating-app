@@ -13,5 +13,5 @@ Run _npm install_ in the terminal</br>
 `npm install`
 
 ### Run the application</br>
-` 1. node index.js`</br>
-` 2. Go to localhost:8000 in the browser`
+` 1. node index.js</br>
+ 2. Go to localhost:8000 in the browser`
